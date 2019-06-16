@@ -5,17 +5,18 @@ export default (self, seed, password)=>{
           seedPhrase: seed, // Optionally provide a 12-word seed phrase
           // salt: fixture.salt,     // Optionally provide a salt.
                                      // A unique salt will be generated otherwise.
-           hdPathString: "m/0'/0'/0'"    // Optional custom HD Path String
+           hdPathString: "m/44'/60'/0'/0"   // Optional custom HD Path String
         }, function (err, ks) {
-          
-          
+             
 
           // Some methods will require providing the `pwDerivedKey`,
           // Allowing you to only decrypt private keys on an as-needed basis.
           // You can generate that value with this convenient method:
-          ks.keyFromPassword(password, function (err, pwDerivedKey) {
+          ks.keyFromPassword(password, async function (err, pwDerivedKey) {
             if (err) throw err;
-            //console.log(pwDerivedKey);
+            //console.log(pwDerivedKey)
+
+            
             // generate five new address/private key pairs
             // the corresponding private keys are also encrypted
             ks.generateNewAddress(pwDerivedKey, 5);
@@ -26,6 +27,7 @@ export default (self, seed, password)=>{
               var pw = prompt("Please enter password", "Password");
               callback(null, pw);
             };
+            await self.savepwDerivedKey(ks,pwDerivedKey);
             
             // Now set ks as transaction_signer in the hooked web3 provider
             // and you can start using web3 using the keys/addresses in ks!

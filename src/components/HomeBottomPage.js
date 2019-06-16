@@ -9,21 +9,21 @@ class  BottomPage extends React.Component{
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
 
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "Easy to Use"
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>Ideal for first time users</p>
-          </Grid.Column>
+            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+              <Header as='h3' style={{ fontSize: '2em' }}>
+                "Easy to Use"
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>Ideal for first time users</p>
+            </Grid.Column>
 
-           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "Fast and Secure."
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Multiple encyrption layers on bitcoin and ethereum .
-            </p>
-          </Grid.Column>
+             <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+              <Header as='h3' style={{ fontSize: '2em' }}>
+                "Fast."
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>
+                Minimal Design for Fast and Easy Transactions .
+              </p>
+            </Grid.Column>
 
            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>

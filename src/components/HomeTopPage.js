@@ -1,6 +1,10 @@
 import React from 'react';
 import {Button,Container, Header, Menu, Responsive, Segment, Visibility} from 'semantic-ui-react';
 import SignInBox from './SignInBox';
+import LogInBox from './LogInBox';
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import WalletPage from '../pages/WalletPage';
 
 
 export default class TopPage extends React.Component{
@@ -28,11 +32,11 @@ export default class TopPage extends React.Component{
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Wallet</Menu.Item>
+
+                <Menu.Item href="/wallet">Wallet</Menu.Item>
+
                 <Menu.Item position='right'>
-                  <Button as='a' inverted>
-                    Log in
-                  </Button>
+                <LogInBox/>
                   
                  {/* <Button as='a' inverted style={{ marginLeft: '0.5em' }}
                   onClick={this.handleSignIn }>

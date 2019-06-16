@@ -1,7 +1,7 @@
 import React from 'react'
 import {Responsive} from 'semantic-ui-react';
-import HomeTopPage from '../components/HomeTopPage';
-import BottomPage from '../components/HomeBottomPage';
+import WalletTopPage from '../components/WalletTopPage';
+import WalletBottomPage from '../components/WalletBottomPage';
 
 
 const getWidth = () => {
@@ -12,10 +12,10 @@ const getWidth = () => {
 
 const HomePage = ({mobile}) => (
   <div>
-    <HomeTopPage mobile={mobile} getWidth={getWidth}>
-    </HomeTopPage>
-     <BottomPage>
-     </BottomPage>
+    <WalletTopPage mobile={mobile} getWidth={getWidth}>
+    </WalletTopPage>
+     <WalletBottomPage>
+     </WalletBottomPage>
    </div>
 )
 
